@@ -1,7 +1,8 @@
-resource "aws_instance" "my_ec2_instance" {
-  ami           = "ami-0abcdef1234567890" # Replace with a valid AMI ID for your region
+resource "aws_instance" "yuvaraj" {
+  ami           = "ami-0c02fb55956c7d316" # Replace with a valid AMI ID for your region
   instance_type = "t2.micro"             # Choose your desired instance type
   tags = {
-    Name = "MyTerraformEC2"
+    Name = "Yuvaraj"
   }
 }
+
