@@ -30,10 +30,9 @@ jobs:
 
       - name: Terraform Init (with S3 Backend)
         run: |
-          terraform init -backend-config="bucket=${{ secrets.TF_STATE_BUCKET }}" \
+          terraform init -backend-config=bucket=$aws-terraform-test-12345 \
                          -backend-config="key=terraform.tfstate" \
                          -backend-config="region=us-east-1" \
-                         -backend-config="dynamodb_table=${{ secrets.TF_STATE_LOCK_TABLE }}"
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
